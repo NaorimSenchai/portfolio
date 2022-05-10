@@ -20,16 +20,16 @@ app.use(cookieParser());
 // --- ROUTES SETTINGS
 // app.use("/admin", mail);
 app.get("/", (req, res) => {
-    res.render("pages/index.ejs");
+	res.render("pages/index.ejs");
 });
 app.get("/projects", (req, res) => {
-    res.render("pages/projects.ejs");
+	res.render("pages/projects.ejs");
 });
 app.get("/sharables", (req, res) => {
-    res.render("pages/sharables.ejs");
+	res.render("pages/sharables.ejs");
 });
 app.get("/history", (req, res) => {
-    res.render("pages/history.ejs");
+	res.render("pages/history.ejs");
 });
 
 // DATABASE LAUNCHING

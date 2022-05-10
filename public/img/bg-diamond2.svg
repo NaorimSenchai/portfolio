@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   width="32"
-   height="50"
-   viewBox="0 0 32 50"
+   width="56"
+   height="92"
+   viewBox="0 0 56 92"
    fill="none"
    version="1.1"
    id="svg144"
-   sodipodi:docname="bg-diamonds.svg"
+   sodipodi:docname="bg-diamond2.svg"
    inkscape:version="1.1 (c68e22c387, 2021-05-23)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -32,29 +32,27 @@
      inkscape:snap-smooth-nodes="true"
      inkscape:snap-midpoints="true"
      inkscape:zoom="5.3291667"
-     inkscape:cx="12.103206"
-     inkscape:cy="36.12197"
+     inkscape:cx="40.813135"
+     inkscape:cy="59.390148"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg144"
-     inkscape:snap-object-midpoints="true"
-     inkscape:snap-center="true" />
+     inkscape:current-layer="svg144" />
   <defs
      id="defs142">
     <linearGradient
        inkscape:collect="always"
-       id="linearGradient1265">
+       id="linearGradient5146">
       <stop
          style="stop-color:#000000;stop-opacity:0.03"
          offset="0"
-         id="stop1261" />
+         id="stop5142" />
       <stop
          style="stop-color:#000000;stop-opacity:0;"
          offset="1"
-         id="stop1263" />
+         id="stop5144" />
     </linearGradient>
     <linearGradient
        id="paint0_linear_604_100"
@@ -378,75 +376,18 @@
     </linearGradient>
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient1265"
+       xlink:href="#linearGradient5146"
        id="linearGradient5148"
        x1="28"
        y1="67"
        x2="28"
        y2="46"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-12,-21)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient1265"
-       id="linearGradient5150"
-       x1="44"
-       y1="42"
-       x2="44"
-       y2="21"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-12,-21)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient1265"
-       id="linearGradient5152"
-       x1="12"
-       y1="42"
-       x2="12"
-       y2="21"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-12,-21)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient1265"
-       id="linearGradient5154"
-       x1="12"
-       y1="92"
-       x2="12"
-       y2="71"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-12,-21)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient1265"
-       id="linearGradient5156"
-       x1="44"
-       y1="92"
-       x2="44"
-       y2="71"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-12,-21)" />
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <path
-     style="opacity:1;fill:url(#linearGradient5156);fill-opacity:1;fill-rule:nonzero"
-     d="M 32,29 44,50 32,71 20,50 Z"
-     id="path2664" />
-  <path
-     style="opacity:1;fill:url(#linearGradient5154);fill-opacity:1;fill-rule:nonzero"
-     d="M 0,29 12,50 0,71 -12,50 Z"
-     id="path2662" />
-  <path
-     style="opacity:1;fill:url(#linearGradient5150);fill-opacity:1;fill-rule:nonzero"
-     d="M 32,-21 44,0 32,21 20,0 Z"
-     id="path2660" />
-  <path
-     style="opacity:1;fill:url(#linearGradient5152);fill-opacity:1;fill-rule:nonzero"
-     d="M 0,-21 12,0 0,21 -12,0 Z"
-     id="path1393" />
-  <path
-     d="M 16,4 28,25 16,46 4,25 Z"
+     d="M 28,25 40,46 28,67 16,46 Z"
      fill="url(#paint7_linear_604_100)"
      fill-opacity="0.03"
      id="path1407"
-     style="opacity:1;fill:url(#linearGradient5148);fill-opacity:1;fill-rule:nonzero" />
+     style="fill:url(#linearGradient5148);fill-opacity:1;fill-rule:nonzero;opacity:1" />
 </svg>

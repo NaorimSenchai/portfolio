@@ -84,11 +84,9 @@
 @keyframes navLinksAppears {
 	0% {
 		opacity: 0;
-		transform: translateX(-100%);
 	}
 	100% {
 		opacity: 100;
-		transform: translateX(0);
 	}
 }
 
@@ -103,9 +101,11 @@
 	align-items: center;
 	width: 100%;
 	padding: .8rem;
-	transition: background-color .3s ease-out;
+	transition: background-color .3s ease-out, padding-left .1s ease-out;
 }
-
+#navbar-y .nav-links li a:hover {
+	padding-left: 1.6rem;
+}
 #navbar-y .nav-links li a img {
 	width: calc(var(--navbar-size) - 2.4rem);
 	height: calc(var(--navbar-size) - 2.4rem);
@@ -124,6 +124,13 @@
 }
 #navbar-y .social-networks li a {
 	display: flex;
+	opacity: .5;
+	transform: scale(80%);
+	transition: opacity .1s ease-out, transform .1s ease-out;
+}
+#navbar-y .social-networks li a:hover {
+	transform: scale(100%);
+	opacity: 1;
 }
 #navbar-y .social-networks li a img {
 	height: 2.4rem;
