@@ -1,0 +1,47 @@
+<nav id="navbar-x" class="navbar">
+	<div class="left-pan">
+		<ul>
+			<li><button class="logo" href="/"><img src="/img/logo.svg"></button></li>
+		</ul>
+	</div>
+	<div class="right-pan">
+		<ul>
+			<li><a href="/contact">Contact</a></li>
+		</ul>
+	</div>
+</nav>
+<div class="wire-1"></div>
+<div class="wire-2"></div>
+<div class="wire-3"></div>
+<nav id="navbar-y" class="navbar">
+	<ul class="nav-links">
+		<li><a href="/"><img src="/img/home.svg">Home</a></li>
+		<li><a href="/projects"><img src="/img/projects.svg">Projects</a></li>
+		<li><a href="/sharables"><img src="/img/sharables.svg">Sharables</a></li>
+		<li><a href="/history"><img src="/img/history.svg">History</a></li>
+	</ul>
+	<ul class="social-networks">
+		<li><a class="linkedin" href="#"><img src="/img/linkedin.svg" alt="Linkedin"></a></li>
+		<li><a class="github" href="#"><img src="/img/github.svg" alt="GitHub"></a></li>
+		<li><a class="gitlab" href="#"><img src="/img/gitlab.svg" alt="GitLab"></a></li>
+	</ul>
+</nav>
+<script>
+	(() => {
+		const logoBtn = document.querySelector("#navbar-x .logo");
+		const clickable = true;
+
+		logoBtn.addEventListener("click", () => {
+			if (clickable) {
+				clickable = false;
+				logoBtn.setAttribute("disabled");
+				setTimeout(() => {
+					document.location = "/";
+				});
+				clickable = true;
+			} else {
+				logoBtn.setAttribute("disabled");
+			}
+		});
+	})();
+</script>

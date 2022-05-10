@@ -1,0 +1,62 @@
+@import url("../css/styles.css");
+@import url("../css/navbar.css");
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - var(--navbar-size));
+    background-image: radial-gradient(var(--color-turquoise), var(--color-night-blue));
+}
+.introduction-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.introduction-container .text-box {
+    display: flex;
+    flex-flow: column nowrap;
+    color: var(--color-white);
+    padding: 2.4rem;
+    animation: textAppears 1s ease-out;
+}
+.introduction-container .text-box h1 {
+    font-family: "Sansita", Helvetica, serif;
+    font-size: 4.8rem;
+}
+@keyframes textAppears {
+    0% {
+        opacity: 0;
+        transform: translateX(-200%);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateX(0);
+    }
+}
+.introduction-container .photo-box {
+    max-height: 16rem;
+    max-width: 16rem;
+    padding: 2.4rem;
+}
+.introduction-container .photo-box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    animation: imgAppears 1s ease-out;
+}
+@keyframes imgAppears {
+    0% {
+        opacity: 0;
+        transform: translateX(200%) rotate(360deg);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateX(0%) rotate(0);
+    }
+}
+
+main {
+    min-height: calc(100vh - var(--navbar-size));
+}
