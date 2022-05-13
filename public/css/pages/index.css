@@ -1,5 +1,6 @@
-@import url("../css/styles.css");
-@import url("../css/navbar.css");
+@import url("../styles.css");
+@import url("../partials/navbar.css");
+@import url("../partials/footer.css");
 
 header {
 	position: relative;
@@ -37,6 +38,22 @@ header .anim-container {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
+@media screen and (max-width: 800px) {
+	.introduction-container {
+		flex-direction: column-reverse;
+	}
+	#navbar-y {
+		left: calc(-1 * (var(--navbar-size) * 4));
+	}
+	.wire-1,
+	.wire-2,
+	.wire-3 {
+		left: 0;
+	}
+	body {
+		margin-left: 0;
+	}
 }
 .introduction-container .text-box {
 	display: flex;
@@ -90,6 +107,82 @@ header .anim-container {
 	}
 }
 
+header {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: calc(100vh - var(--navbar-size));
+	background-image: radial-gradient(var(--color-turquoise), var(--color-night-blue));
+	background-position: center;
+}
+
+header .anim-container {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: url("/img/bg-diamonds.svg");
+	animation: headerBg 3s linear infinite;
+	pointer-events: none;
+}
+
+/* --- MAIN --- */
+
 main {
 	min-height: calc(100vh - var(--navbar-size));
+}
+
+main section {
+	min-height: calc(100vh - var(--navbar-size));
+}
+
+#intro {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: linear-gradient(90deg, var(--color-black), var(--color-gray));
+	color: var(--color-white);
+}
+
+#intro .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 80rem;
+}
+#intro .container .photo-box {
+	padding: 2.4rem;
+}
+#intro .container .text-box {
+	padding: 2.4rem;
+}
+#intro .row {
+	padding: .4rem 1.6rem;
+}
+#intro .row h3,
+#intro .row p {
+	padding: .8rem 0;
+}
+
+#soft-skills {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: calc(100vh - var(--navbar-size));
+	background-image: radial-gradient(#ff9900, #c00df7);
+	background-position: center;
+}
+@keyframes softSkillsBg {
+	0% {
+		background-position: 0 0;
+	}
+	99.999% {
+		background-position: -32px 50px;
+	}
+	100% {
+		background-position: 0 0;
+	}
 }

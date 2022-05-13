@@ -1,0 +1,18 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--color-black);
+    min-height: var(--navbar-size);
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer div p {
+    color: var(--color-white);
+    padding: .8rem;
+}

@@ -1,14 +1,11 @@
 <nav id="navbar-x" class="navbar">
-	<div class="left-pan">
-		<ul>
-			<li><button class="logo" href="/"><img src="/img/logo.svg"></button></li>
-		</ul>
+	<div class="col">
+		<button class="navbar-y-toggler">X</button>
 	</div>
-	<div class="right-pan">
-		<ul>
-			<li><a href="/contact">Contact</a></li>
-		</ul>
+	<div class="col">
+		<button class="logo" href="/"><img src="/img/logo.svg"></button>
 	</div>
+	<div class="col"></div>
 </nav>
 <div class="wire-1"></div>
 <div class="wire-2"></div>
@@ -21,28 +18,89 @@
 		<li><a href="/history"><img src="/img/history.svg">History</a></li>
 		<li><a href="/contact"><img src="/img/contact.svg">Contact</a></li>
 	</ul>
-	<ul class="social-networks">
-		<li><a class="linkedin" href="#"><img src="/img/linkedin.svg" alt="Linkedin"></a></li>
-		<li><a class="github" href="#"><img src="/img/github.svg" alt="GitHub"></a></li>
-		<li><a class="gitlab" href="#"><img src="/img/gitlab.svg" alt="GitLab"></a></li>
-	</ul>
+	<div class="nav-y-bottom">
+		<div class="time">
+			<span class="hour">12</span>
+			<p class="middle">:</p>
+			<span class="minute">30</span>
+			<p class="middle">:</p>
+			<span class="second">00</span>
+		</div>
+		<ul class="social-networks">
+			<li><a class="linkedin" href="https://www.linkedin.com/in/romain-chenais/"><img src="/img/linkedin.svg" alt="Linkedin"></a></li>
+			<li><a class="github" href="https://github.com/NaorimSenchai"><img src="/img/github.svg" alt="GitHub"></a></li>
+			<li><a class="gitlab" href="https://gitlab.com/naorimsenchai"><img src="/img/gitlab.svg" alt="GitLab"></a></li>
+		</ul>
+	</div>
 </nav>
 <script>
+	// Making the logo button a scroll back to top button
 	(() => {
-		const logoBtn = document.querySelector("#navbar-x .logo");
-		const clickable = true;
+		document.querySelector("#navbar-x .logo").addEventListener("click", () => window.scrollTo(0, 0));
+	})();
 
-		logoBtn.addEventListener("click", () => {
-			if (clickable) {
-				clickable = false;
-				logoBtn.setAttribute("disabled");
-				setTimeout(() => {
-					document.location = "/";
-				});
-				clickable = true;
-			} else {
-				logoBtn.setAttribute("disabled");
+	// Lightening current page on navbar-y
+	(() => {
+		const siteLocation = window.location.pathname;
+
+		document.querySelectorAll(".nav-links a").forEach(a => {
+			if (siteLocation === a.getAttribute("href")) {
+				a.classList.add("active");
 			}
 		});
+	})();
+
+	(() => {
+		// Making time be dynamic
+		const hour = document.querySelector(".time .hour");
+		const minute = document.querySelector(".time .minute");
+		const second = document.querySelector(".time .second");
+
+		const middle = document.querySelectorAll(".time .middle");
+		// middle.style.opacity = 0;
+		
+		let now = new Date();
+		hour.textContent = (now.getHours()).toString().length < 2 ? `0${now.getHours()}` : now.getHours();
+		minute.textContent = (now.getMinutes()).toString().length < 2 ? `0${now.getMinutes()}` : now.getMinutes();
+		second.textContent = (now.getSeconds()).toString().length < 2 ? `0${now.getSeconds()}` : now.getSeconds();
+		setInterval(() => {
+			now = new Date();
+
+			// middle.style.opacity = middle.style.opacity == 1 ? 0 : 1;
+			hour.textContent = (now.getHours()).toString().length < 2 ? `0${now.getHours()}` : now.getHours();
+			minute.textContent = (now.getMinutes()).toString().length < 2 ? `0${now.getMinutes()}` : now.getMinutes();
+			second.textContent = (now.getSeconds()).toString().length < 2 ? `0${now.getSeconds()}` : now.getSeconds();
+		}, 1000);
+	})();
+
+	(() => {
+		const pixelToRem = (pixel) => {
+			try {
+				return (parseFloat(pixel.split("px")[0]) / 10);
+			} catch (err) {
+				return err.message;
+			};
+		};
+		const remToPixel = (rem) => {
+			try {
+				return (parseFloat(rem.split("rem")[0]) * 10);
+			} catch (err) {
+				return err.message;
+			};
+		};
+		console.log(remToPixel("4.8rem"));
+		const toggleNavbarY = () => {
+			const navY = document.querySelector("#navbar-y");
+			const navbarSize = getComputedStyle(document.documentElement).getPropertyValue('--navbar-size');
+			console.log(navbarSize);
+			if (pixelToRem(window.getComputedStyle(navY).left) < 0) {
+				navY.style.setProperty("left", 0);
+				document.body.style.setProperty("margin-left", `${navbarSize.split("rem")[0] * 4}rem`);
+			} else {
+				navY.style.setProperty("left", `${-(navbarSize.split("rem")[0] * 4)}rem`);
+				document.body.style.setProperty("margin-left", 0);
+			}
+		};
+		document.querySelector(".navbar-y-toggler").addEventListener("click", toggleNavbarY);
 	})();
 </script>

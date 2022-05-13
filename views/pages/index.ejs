@@ -1,31 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Romain Chenais - Développeur Full-Stack JS</title>
-    <link rel="stylesheet" href="css/index.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Romain Chenais - JS Full-Stack Web Developper</title>
+	<link rel="stylesheet" href="css/pages/index.css">
 </head>
 <body>
-    <header>
-        <%- include("../partials/navbar.ejs") %>
-        <div class="anim-container">
-            <!-- EMPTY DIV FOR CSS ANIMATION -->
-        </div>
-        <div class="introduction-container">
-            <div class="text-box">
-                <h1>Romain Chenais</h1>
-                <p>Développeur Full-Stack JS</p>
-            </div>
-            <div class="photo-box">
-                <img src="/img/pfp.jpg" alt="Photo">
-            </div>
-        </div>
-    </header>
-    <main>
-        <h1>Hi!</h1>
-    </main>
-    <footer></footer>
+	<header>
+		<%- include("../partials/navbar.ejs") %>
+		<div class="anim-container">
+			<!-- EMPTY DIV FOR CSS ANIMATION -->
+		</div>
+		<div class="introduction-container">
+			<div class="text-box">
+				<h1>Romain Chenais</h1>
+				<p>Full-Stack JS Developer</p>
+			</div>
+			<div class="photo-box">
+				<img src="/img/pfp.jpg" alt="Photo">
+			</div>
+		</div>
+	</header>
+	<main>
+		<section id="intro">
+			<div class="container">
+				<div class="photo-box">
+					<img src="/img/char_laptop.gif" alt="char_laptop">
+				</div>
+				<div class="text-box">
+					<div class="row">
+						<h3>Good morning,</h3>
+					</div>
+					<div class="row">
+						<p>I'm Romain, a non-exclusively yet essentially JavaScript Full-Stack web developer with <span id="age"></span> years of existence on our dear Earth.</p>
+					</div>
+					<div class="row">
+						<p>Strongly attracted by the little world of developing web apps, I started a web dev course in 2019 which leaded me to acquire some skills, both technical and human, such as finding ways to succeed in a project, and helping my comrades do so.</p>
+					</div>
+					<div class="row">
+						<p>My main goal is to get enough skills to be as versatile as possible when it comes to develop a project. As a result, I can also make logos, sound effects or user experience analysis.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="soft-skills">
+			<div class="anim-container">
+				<!-- EMPTY DIV FOR CSS ANIMATION -->
+			</div>
+			<div class="container">
+
+			</div>
+		</section>
+		<section class="history">
+			
+		</section>
+	</main>
+	<%- include("../partials/footer.ejs") %>
+	<script>
+		(() => {
+			const birth = new Date('1999-07-15');
+			const today = new Date();
+			const age = (today.getFullYear() - birth.getFullYear() - 1) + (today.getMonth() - birth.getMonth() < 0 ? 0 : 1);
+			document.querySelector("#age").textContent = age;
+		})();
+	</script>
 </body>
 </html>
