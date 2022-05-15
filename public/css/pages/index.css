@@ -148,22 +148,63 @@ main section {
 
 #intro .container {
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	max-width: 80rem;
-}
-#intro .container .photo-box {
-	padding: 2.4rem;
-}
-#intro .container .text-box {
-	padding: 2.4rem;
+	max-width: 100rem;
+	padding-bottom: 8rem;
 }
 #intro .row {
-	padding: .4rem 1.6rem;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: .8rem;
+	border-radius: .4rem;
+	overflow: hidden;
 }
-#intro .row h3,
-#intro .row p {
-	padding: .8rem 0;
+#intro .title {
+	display: flex;
+	justify-content: center;
+	margin: 8rem;
+	/* color: transparent;
+	background-image: linear-gradient(45deg, var(--color-night-blue), var(--color-turquoise), var(--color-night-blue));
+	background-clip: text;
+	-webkit-background-clip: text;
+	background-repeat: repeat-x;
+	background-size: contain;
+	animation: animatedTitle 3s ease-in-out linear infinite; */
+}
+/* @keyframes animatedTitle {
+	0% {
+		background-position-x: 0;
+	}
+	50% {
+		background-position-x: -100%;
+	}
+	100% {
+		background-position-x: 0;
+	}
+} */
+
+#intro .photo-box {
+	padding: 2.4rem;
+	z-index: 1;
+}
+#intro .photo-box img {
+	max-width: 16.4rem;
+	min-width: 12.8rem;
+	object-fit: cover;
+}
+#intro .intro-img {
+	transform: scaleX(-1);
+	background-image: radial-gradient(var(--color-turquoise), var(--color-night-blue));
+	border-radius: .4rem;
+	box-shadow: #29292988 -.4rem .4rem .8rem inset;
+}
+#intro .text-box {
+	padding: 2.4rem;
+	z-index: 1;
 }
 
 #soft-skills {

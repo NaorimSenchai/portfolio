@@ -30,12 +30,26 @@ app.get("/projects", async (req, res) => {
 	} catch (err) {
 		res.send(err.message);
 	};
-	
 });
 app.get("/sharables", async (req, res) => {
-	res.render("pages/sharables.ejs");
+	try {
+		const data = await knex('sharable').select();
+		console.log(data);
+		res.render("pages/sharables.ejs", {data});
+	} catch (err) {
+		res.send(err.message);
+	};
 });
 app.get("/history", async (req, res) => {
+	try {
+		const data = await knex('history').select();
+		console.log(data);
+		res.render("pages/history.ejs", {data});
+	} catch (err) {
+		res.send(err.message);
+	};
+});
+app.get("/contact", async (req, res) => {
 	res.render("pages/history.ejs");
 });
 
